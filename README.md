@@ -1,4 +1,4 @@
-# alpha-shop-vue
+# Alpha-Shop-Vue
 ---
 ## 專案桌機版畫面
 
