@@ -1,0 +1,80 @@
+.form-part {
+  grid-template-columns: repeat(6, 65px);
+  grid-template-rows: repeat(3, 1fr);
+  width: 540px;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--footer-background);
+  &__address {
+    height: 288px;
+    .form-row,
+    .form-row-2,
+    .form-row-3 {
+      display: grid;
+      margin-top: 24px;
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 30px;
+      grid-template-areas:
+        " title title name name name name "
+        " phone phone phone email email email "
+        " city city address address address address ";
+    }
+    .form-group-title {
+      grid-area: title;
+      font-size: 12px;
+      #title {
+        margin-top: 8px;
+        width: 160px;
+        height: 40px;
+        border-radius: 4px;
+      }
+    }
+    .form-group-name {
+      grid-area: name;
+      font-size: 12px;
+      #name {
+        width: 350px;
+        height: 40px;
+        margin-top: 8px;
+      }
+    }
+    .form-group-tel {
+      font-size: 12px;
+      grid-area: phone;
+      #phone {
+        width: 255px;
+        height: 40px;
+        margin-top: 8px;
+      }
+    }
+    .form-group-email {
+      font-size: 12px;
+      grid-area: email;
+      #email {
+        width: 255px;
+        height: 40px;
+        margin-top: 8px;
+      }
+    }
+    .form-group-city {
+      font-size: 12px;
+      grid-area: city;
+      #city {
+        width: 160px;
+        height: 40px;
+        margin-top: 8px;
+      }
+    }
+    .form-group-address {
+      font-size: 12px;
+      grid-area: address;
+      #address {
+        width: 350px;
+        height: 40px;
+        margin-top: 8px;
+      }
+    }
+    input[type="text"]::placeholder {
+      padding-left: 16px;
+    }
+  }
+}

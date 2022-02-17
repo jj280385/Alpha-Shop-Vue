@@ -1,0 +1,25 @@
+@import "color";
+@import "reset";
+@import "include";
+@import "extend";
+@import "FormAdress";
+@import "FormCheckout";
+@import "FormShipping";
+@import "Stepper";
+@import "Button";
+@import "ShoppingCart";
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#main-content__form {
+  width: 540px;
+  margin-top: 64px;
+}
+
+.form-parts__title {
+  @extend %form-title;
+}

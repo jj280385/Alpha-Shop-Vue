@@ -1,0 +1,72 @@
+.stepper-container {
+  @include position(relative);
+  width: 534px;
+  height: 24px;
+  margin-top: 48px;
+  @include flex(row, space-between, center);
+  .step {
+    @include flex(row, center, center);
+    width: 96px;
+    height: 24px;
+    text-align: center;
+    @include getStepNums(3);
+    .circle-container {
+      width: 24px;
+      height: 24px;
+      @extend %circle-container;
+      border: 1px solid var(--gray-5);
+      color: var(--gray-5);
+    }
+  }
+  .connect-line {
+    @include connectLine;
+    background-color: var(--main-font-color);
+  }
+  .connect-line-1 {
+    position: absolute;
+    top: 11.5px;
+    right: 128px;
+    height: 1px;
+    width: 60px;
+    background-color: var(--gray-5);
+  }
+  .checked {
+    .circle-container {
+      background-color: var(--main-font-color);
+      color: var(--body-background);
+    }
+    .connect-line {
+      @extend %connect-line;
+      background-color: var(--black-1);
+      display: block;
+    }
+    .label-container {
+      margin-left: 0.5rem;
+      color: var(--main-font-color);
+    }
+    &.checked {
+      .circle-container {
+        background-color: var(--main-font-color);
+        color: var(--body-background);
+      }
+      &.checked .circle-container::after {
+        content: "\2714";
+      }
+      &.active {
+        .circle-container {
+          background-color: var(--body-background);
+          color: var(--main-font-color);
+          border: 1px solid var(--main-font-color);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.step-center {
+  @include flex(row, center, center);
+}
+.step-right {
+  @include flex(row, flex-end, center);
+}
